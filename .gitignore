@@ -1,0 +1,13 @@
+# Python virtual environment
+venv/
+
+# Python script to generate metadata CSV
+generateMetadataCSV.py
+
+# Ignore CSV file if you don't want to push it
+# imageMetadata.csv
+
+# Ignore other common files
+__pycache__/
+*.pyc
+.DS_Store
