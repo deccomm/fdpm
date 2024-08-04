@@ -30,3 +30,11 @@ jobs:
           git add assets/imageList.json
           git commit -m "Update image list JSON" -a || echo "No changes to commit"
           git push
+
+      - name: Clear CDN Cache
+        run: |
+          find assets -type f | while read file; do
+            echo "Purging cache for $file"
+            curl -X PURGE "https://cdn.jsdelivr.net/gh/deccomm/fdpm@latest/$file"
+            sleep 1
+          done
