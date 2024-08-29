@@ -11,3 +11,9 @@ generateMetadataCSV.py
 __pycache__/
 *.pyc
 .DS_Store
+
+# Ignore all .zip files
+*.zip
+
+# Ignore all .numbers files (Apple Numbers files)
+*.numbers
