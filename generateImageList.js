@@ -1,15 +1,15 @@
 const fs = require('fs');
 const path = require('path');
 
-const assetsDir = path.join(__dirname, 'assets');
-const outputFilePath = path.join(__dirname, 'assets', 'imageList.json');
+const assetsDir = path.join(__dirname, 'img');
+const outputFilePath = path.join(__dirname, 'img', 'imageList.json');
 
 let imageList = [];
 
 // assets 폴더 내의 모든 파일을 순회
 fs.readdirSync(assetsDir).forEach(file => {
     if (/\.(jpg|jpeg|png|svg)$/.test(file)) {
-        imageList.push(`https://cdn.jsdelivr.net/gh/deccomm/fdpm/assets/${file}`);
+        imageList.push(`https://cdn.jsdelivr.net/gh/deccomm/fdpm/img/${file}`);
     }
 });
 
